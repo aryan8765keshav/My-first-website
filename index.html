@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Webpage</title>
+    <style>
+      body {
+        background-image: url('https://www.w3schools.com/html/img_chania.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 50px;
+        color: white;
+        position: relative;
+      }
+
+      /* Dark overlay to make text readable */
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+      }
+
+      h1 {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      }
+
+      p {
+        color: white;
+        font-size: 18px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+      }
+
+      button {
+        background-color: rgba(0,0,128,0.7);
+        border: none;
+        padding: 10px 20px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+      }
+
+      button:hover {
+        background-color: rgba(0,0,128,0.9);
+      }
+
+      img {
+        margin-top: 30px;
+        width: 300px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      }
+    </style>
+</head>
+<body>
+    <h1>Hello, I made this on my phone!</h1>
+    <p id="myPara">This is my first webpage using Acode.</p>
+    <button onclick="changeText()">Click Me</button>
+
+    <!-- Your pharmacy logo image -->
+    <br><br>
+    <img src="https://i.postimg.cc/brCqCnYr/IMG-20250526-180348913.jpg" alt="Pharmacy Logo">
+
+    <script>
+        function changeText() {
+            document.getElementById("myPara").innerHTML = "You clicked the button. Text changed!";
+        }
+    </script>
+</body>
+</html>
